@@ -7,6 +7,13 @@ Created on 2013-4-27
 from flask import Flask
 from flask import render_template
 from jinja2 import Template
+import json
+
+
+json_data = open("hello.json")
+
+data = json.load(json_data)
+
 
 app = Flask(__name__)
 
@@ -22,13 +29,10 @@ def hello(name=None):
     return render_template('hello.html', name=name)
 
 @app.route('/ble/')
-def ble(name=None):
-    return render_template('hello.html', name=name)
+def ble():
+    return render_template('hello.ctemp', ble=data)
 
 
 if __name__ == '__main__':
     app.run(None, None, True)
-    
-
-
 
