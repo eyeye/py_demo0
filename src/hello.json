@@ -1,0 +1,18 @@
+
+
+{
+    "ServiceName": "UART",
+    "UUID": "0x0001",
+
+    "Characteristics": 
+    [
+        {
+            "name": "rx",
+            "UUID": "0x0002"
+        },
+        {
+            "name": "rx",
+            "UUID": "0x0002"
+        }
+    ]
+}
