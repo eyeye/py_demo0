@@ -6,4 +6,11 @@
 char* ServiceName = "{{ble.ServiceName}}";
 uint16_t uuid = {{ble.UUID}};
 
-ttt
+Characteristics = {
+{% for char in ble.Characteristics %}
+    {
+        .name = {{char.name}},
+        .UUID = {{char.UUID}},
+    },
+{% endfor %}
+}
